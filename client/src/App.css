@@ -1,0 +1,48 @@
+.:root {
+  --bg: #0b1220;
+  --surface: #111b2d;
+  --surface-2: #1f2c4a;
+  --text: #e7eef9;
+  --muted: #9bb4d7;
+  --accent: #5e97ff;
+  --border: #2f3d5d;
+  --good: #2ec28f;
+  --bad: #ff7f7f;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: #081026; color: var(--text); }
+
+#root { width: 100vw; min-height: 100vh; padding: 20px; }
+
+.app-shell { max-width: 1200px; margin: auto; display: flex; flex-direction: column; gap: 16px; }
+
+.hero { background: #122144; border: 1px solid #26345d; border-radius: 14px; padding: 18px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.eyebrow { margin: 0; color: #7ea8ff; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; }
+.hero h1 { margin: 4px 0 0; font-size: 1.6rem; }
+.subtitle { margin: 6px 0 0; color: #c7d9ff; }
+.status-chip { background: #1d2f5f; color: #dfe9ff; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; border: 1px solid #3f5a9c; }
+
+.controls .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.label { margin: 0; color: #9fb1d5; font-size: 0.75rem; letter-spacing: 0.03em; text-transform: uppercase; }
+.value { margin: 4px 0 0; font-size: 1.25rem; font-weight: 700; }
+.value.good { color: var(--good); }
+.value.bad { color: var(--bad); }
+.actions { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+button { border: 0; border-radius: 8px; background: #3550a1; color: #f7faff; padding: 8px 14px; font-weight: 600; cursor: pointer; }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+.error { margin-top: 8px; color: #ff9a9a; }
+
+.tile-grid { background: #121c36; border: 1px solid #243b66; border-radius: 14px; padding: 14px; }
+.header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.header-row h2 { margin: 0; font-size: 1.2rem; }
+.grid-cards { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.tile { background: #182751; border: 1px solid #2f477f; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 6px; }
+.tile-header { display: flex; justify-content: space-between; font-size: 0.75rem; color: #aad2ff; }
+.tile-value { font-size: 0.78rem; color: #d4e4ff; }
+
+footer { margin-top: 6px; color: #8a9bc0; text-align: center; }
+
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
