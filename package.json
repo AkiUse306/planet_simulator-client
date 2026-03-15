@@ -1,0 +1,33 @@
+{
+  "name": "planet-simulator-client",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "client:dev": "cd client && npm run dev",
+    "client:build": "cd client && npm run build",
+    "client:lint": "cd client && npm run lint",
+    "backend:run": "cd backend && source ../.venv/bin/activate 2>/dev/null || true && uvicorn api.server:app --reload --port 8000",
+    "backend:init-cpp": "cd backend/cpp-sim && mkdir -p build && cd build && cmake .. && cmake --build .",
+    "dev": "npm run backend:run",
+    "install:all": "npm install --prefix client && python -m venv .venv && source .venv/bin/activate 2>/dev/null || true && pip install -U pip && pip install fastapi uvicorn"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
+    "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "vite": "^8.0.0"
+  }
+}

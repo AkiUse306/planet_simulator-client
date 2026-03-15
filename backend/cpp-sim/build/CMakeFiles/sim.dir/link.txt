@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/sim.dir/main.cpp.o CMakeFiles/sim.dir/planet.cpp.o -o sim 

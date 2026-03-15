@@ -1,0 +1,3 @@
+/workspaces/planet_simulator-client/backend/cpp-sim/build/CMakeFiles/sim.dir
+/workspaces/planet_simulator-client/backend/cpp-sim/build/CMakeFiles/edit_cache.dir
+/workspaces/planet_simulator-client/backend/cpp-sim/build/CMakeFiles/rebuild_cache.dir
